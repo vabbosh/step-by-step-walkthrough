@@ -1,5 +1,5 @@
 #FROM artifactorypilot.srv.westpac.com.au:50996/wdp/tomcat-bamboobuild:latest
-FROM wdp-tomcat-base
+FROM registry.ng.bluemix.net/vabbosh/wdp-tomcat-base:4
 ADD ROOT.war "/usr/local/tomcat/webapps/ROOT.war"
 RUN rm -rf "/usr/local/tomcat/webapps/ROOT" && chown -R tomcat:tomcat /usr/local/tomcat && \
     chmod -R u+rwX /usr/local/tomcat && chmod -R go-rwx /usr/local/tomcat
